@@ -6,16 +6,6 @@ metadata:
   annotations:
     config.linkerd.io/proxy-await: enabled
     linkerd.io/inject: enabled
-    metadata.weave.works/description: Value 1
-    metadata.weave.works/created-by: Value 2
-    metadata.weave.works/createdBy: Value 3
-    metadata.weave.works/CreatedBy: Value 4
-    metadata.weave.works/link-to-google: https://google.com
-    metadata.weave.works/html: <p><b>html</b></p>
-    metadata.weave.works/multi-lines: |
-      This is first line
-      This is second line
-    metadata.weave.works/Version: some version
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -57,6 +47,17 @@ kind: Kustomization
 metadata:
   name: msdemo
   namespace: msdemo
+  annotations:
+    metadata.weave.works/description: Value 1
+    metadata.weave.works/created-by: Value 2
+    metadata.weave.works/createdBy: Value 3
+    metadata.weave.works/CreatedBy: Value 4
+    metadata.weave.works/link-to-google: https://google.com
+    metadata.weave.works/html: <p><b>html</b></p>
+    metadata.weave.works/multi-lines: |
+      This is first line
+      This is second line
+    metadata.weave.works/Version: some version
 spec:
   targetNamespace: msdemo
   interval: 60m0s
