@@ -9,5 +9,5 @@ spec:
   path: ./
   prune: false
   sourceRef:
-    kind: ""
-    name: ""
+    kind: GitRepository
+    name: flux-system
